@@ -1,0 +1,59 @@
+<!-- dashboard.component.html -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Registered Users</h5>
+                    <p class="card-text">{{ dashboardData?.totalUsers }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Total Orders</h5>
+                    <p class="card-text">{{ dashboardData?.totalOrders }}</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+ <div *ngIf="user.length > 0; else noUsers">
+    <table class="user-table">
+      <thead>
+        <tr>
+          <th>User ID</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Mobile</th>
+          <th>Flat No</th>
+          <th>Wing Name</th>
+          <th>Society Name</th>
+          <th>Area</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of user">
+          <td>{{ user.user_id }}</td>
+          <td>{{ user.first_name }}</td>
+          <td>{{ user.last_name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.mobile }}</td>
+          <td>{{ user.flat_no }}</td>
+          <td>{{ user.wing_name }}</td>
+          <td>{{ user.sociaty_name }}</td>
+          <td>{{ user.area }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ng-template #noUsers>
+    <p class="no-users-message">No users found.</p>
+  </ng-template>
+  
+  
+
+</div>

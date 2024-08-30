@@ -1,0 +1,424 @@
+/* dashboard.component.css */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f4f7f6;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  
+}
+
+.sidebar {
+  width: 220px;
+  background: linear-gradient(45deg, #333, #444);
+  color: #fff;
+  position: fixed;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar ul li:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.main-content {
+  margin-left: 220px;
+  padding: 10px;
+  width: calc(100% - 220px);
+  background: #f4f7f6;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:#dbe6f9;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-weight: bolder;
+  color: #050505;
+}
+
+.header .user-info {
+  display: flex;
+  align-items: center;
+}
+
+.header .user-info span {
+  margin-right: 15px;
+  color: #060606;
+}
+
+.header .user-info button {
+  background: #ff5e5e;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.header .user-info button:hover {
+  background: #ff3b3b;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.summary-item {
+  background:white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 23%;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-left: .25rem solid #4e73df!important
+  
+}
+
+.summary-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgb(10, 128, 237);
+}
+
+.summary-item h3 {
+  margin: 0 0 10px;
+  color: #555;
+  font-size:medium;
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+}
+
+.summary-item p {
+ 
+  font-weight: bolder;
+  margin: auto;
+
+  color: #292727;
+  font-family: "Font Awesome 5 Free"
+ 
+
+
+}
+
+.orders {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.orders h2 {
+  margin-top: 0;
+  color: #0b0b0b;
+}
+
+.orders table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.orders th, .orders td {
+  padding: 12px 15px;
+  border: 1px solid #eee;
+  text-align: left;
+  color: #060101;
+}
+
+.orders th {
+  background: #f9f9f9;
+  font-weight: bold;
+}
+
+.orders tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.orders tr:hover {
+  background: #f1f1f1;
+}
+
+.pending-status {
+  color: orange; /* Example color for pending status */
+}
+
+.canceled-status {
+  color: red; /* Example color for canceled status */
+}
+
+.completed-status {
+  color: green; /* Example color for completed status */
+}
+element.style {
+}
+.text-gray-300 {
+    color: #dddfeb !important;
+}
+.fa, .fas {
+    font-weight: 900;
+}
+.fa, .far, .fas {
+    font-family: "Font Awesome 5 Free";
+}
+.fa-2x {
+    font-size: 2em;
+}
+.fa, .fab, .fad, .fal, .far, .fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
+*, :after, :before {
+  box-sizing: border-box;
+}
+user agent stylesheet
+i {
+  font-style: italic;
+}
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+  position: relative;
+  width: 100%;
+  padding-right: .75rem;
+  padding-left: .75rem;
+}
+col-md-2 col-3{
+  width: auto;
+  height: auto;
+}
+
+.form-control mb-2{
+
+  width: auto;
+  height: auto;
+}
+
+/* CSS for the select element */
+.col-md-2.col-3 .form-control {
+  width: auto; /* Make the select element take up 100% of its container width */
+}
+
+/* Optional: Adjust margin-bottom for spacing */
+.col-md-2.col-3 .mb-2 {
+  margin-bottom: 10px; /* Adjust as needed */
+}
+
+/* CSS for the dropdown arrow */
+
+.icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:#dbe6f9;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  position: relative; /* Ensure positioning context for absolute positioning */
+}
+
+/* Navigation Drawer Icon */
+.nav-toggle-icon {
+  position: absolute;
+  top: 50%;
+  left: 20px; /* Adjust as needed */
+  transform: translateY(-50%);
+  z-index: 9999;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: none;
+}
+
+/* Horizontal Lines for Icon */
+.nav-toggle-icon::before,
+.nav-toggle-icon::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  transition: transform 0.3s ease;
+}
+
+/* Transform Lines for Icon */
+.nav-toggle-icon::before {
+  transform: translateY(-8px) translateX(-50%);
+}
+
+.nav-toggle-icon::after {
+  transform: translateY(8px) translateX(-50%);
+}
+
+/* Rotate Lines for Icon when Active */
+#nav-toggle:checked + .nav-toggle-icon::before {
+  transform: rotate(45deg) translate(-50%, -50%);
+}
+
+#nav-toggle:checked + .nav-toggle-icon::after {
+  transform: rotate(-45deg) translate(-50%, -50%);
+}
+
+#nav-toggle:checked + .nav-toggle-icon::before,
+#nav-toggle:checked + .nav-toggle-icon::after {
+  transition-delay: 0.1s;
+}
+
+/* Hide Checkbox */
+#nav-toggle {
+  display: none;
+}
+
+
+
+.summary-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust the gap between elements */
+}
+
+.summary-item svg {
+  width: 32px; /* Adjust the size as needed */
+  height: 32px; /* Adjust the size as needed */
+  fill: #6c757d; /* Adjust the color as needed, matching text-gray-300 */
+}
+
+
+.customer-icon {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  margin-left: 80px;
+
+}
+
+.customer-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: #4e9aeb;
+  transition: fill 0.3s;
+}
+
+.customer-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 2, 9, 0.2);
+  margin-left: 80px
+}
+
+.customer-icon:hover svg {
+  fill: #6cadf1;
+
+}
+
+.product-icon {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  margin-left: 80px;
+
+}
+
+.product-icon svg {
+  width: 100%;
+  height: 100%;
+  fill: #28a745; /* Green color */
+  transition: fill 0.3s;
+
+}
+
+.product-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(96, 94, 232, 0.2);
+  margin-left: 80px;
+
+}
+
+.product-icon:hover svg {
+  fill: #218838; /* Darker green on hover */
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+
+  .sidebar {
+    width: 100%; /* Full width on smaller screens */
+    position: static; /* Remove fixed position */
+    height: auto; /* Auto height */
+    margin-bottom: 20px; /* Add margin bottom for spacing */
+    box-shadow: none; /* Remove box shadow */
+  }
+
+  .main-content {
+    margin-left: 0; /* Remove margin left */
+    width: 100%; /* Full width */
+  }
+
+  .header {
+    flex-direction: column; /* Stack items vertically */
+    padding: 15px; /* Adjust padding */
+  }
+
+  .header .user-info {
+    flex-direction: column; /* Stack items vertically */
+    margin-top: 10px; /* Add margin top for spacing */
+  }
+
+  .summary {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .summary-item {
+    width: 100%; /* Full width */
+    margin-bottom: 20px; /* Add margin bottom for spacing */
+}
+}

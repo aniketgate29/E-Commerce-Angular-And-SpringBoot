@@ -1,0 +1,130 @@
+<!-- dashboard.component.html -->
+<div class="dashboard-container">
+
+  
+  <div class="main-content">
+    <header class="header">
+      <h1>Admin Dashboard</h1>
+      <div class="user-info">
+        <span>Welcome, Admin</span>
+        <button (click)="logout()">Logout</button>
+      </div>
+    </header>
+    
+    <div class="content" style="font-family: Font Awesome 5 Free;">
+      <div class="summary" >
+        <div class="summary-item">
+          <h3 style="display: inline-block;">TOTAL SALES</h3>
+        
+          
+          <p style="display: inline-block; font-size: 1.2em; margin-left: 10px;">{{ dashboardData?.todaySales }}</p>
+
+          <div class="customer-icon">
+          <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    width="24"
+    height="24">
+    
+
+    <path
+        d="M21 7h-1V6a1 1 0 0 0-1-1h-3V4a1 1 0 0 0-1-1h-6a1 1 0 0 0-1 1v1H5a1 1 0 0 0-1 1v1H3a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-8h1a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm-3 0H6V6h12v1zm-1 2H7v10h10V9zm-7 7v2H9v-2h2zm4 0v2h-2v-2h2z"
+        fill="#4e9aeb"
+    />
+</svg>
+</div>
+          
+        </div>
+        
+        <div class="summary-item">
+          <h3 style="display: inline-block;">ORDERS</h3>   <p style="display: inline-block; font-size: 1.2em; margin-left: 10px;">{{ dashboardData?.todayOrders }}</p> <div class="customer-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="24" height="24" class="text-gray-300">
+              <path d="M7 18c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm0 2c0-.552-.448-1-1-1s-1 .448-1 1 .448 1 1 1 1-.448 1-1zm10-2c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm0 2c0-.552-.448-1-1-1s-1 .448-1 1 .448 1 1 1 1-.448 1-1zM1 2v2h2l3.6 7.59-1.35 2.45C5.104 14.551 5 14.771 5 15c0 1.104.896 2 2 2h12v-2H7.42c-.274 0-.52-.224-.544-.496L7.16 14h9.77c.793 0 1.504-.469 1.795-1.178L21.922 5H5.21L4.27 2H1zm16.24 6c-.4 0-.74.305-.82.695l-.408 1.632C15.803 9.437 15.446 9 15 9h-4c-.553 0-1 .447-1 1s.447 1 1 1h3.22l-.304 1.216c-.117.468.106.968.545 1.173l.272.11L15 14.28l.652-.261C16.136 13.837 16 13.424 16 13c0-.553.447-1 1-1h4c.553 0 1-.447 1-1s-.447-1-1-1h-3.22l.304-1.216C18.636 6.73 18.308 6 17.76 6h-4.52z"/>
+            </svg>
+          </div>
+        </div>
+        
+       <div class="summary-item">
+  <h3 style="display: inline-block;">CUSTOMERS</h3>  <p style="display: inline-block; font-size: 1.2em; margin-left: 10px;">{{ dashboardData?.totalUsers }}</p>
+  <div class="customer-icon">
+    <svg width="100px" height="100px" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 12C9.243 12 7 9.757 7 7C7 4.243 9.243 2 12 2C14.757 2 17 4.243 17 7C17 9.757 14.757 12 12 12ZM12 4C10.346 4 9 5.346 9 7C9 8.654 10.346 10 12 10C13.654 10 15 8.654 15 7C15 5.346 13.654 4 12 4ZM18 20V18C18 15.243 15.757 13 13 13H11C8.243 13 6 15.243 6 18V20H4V18C4 14.691 6.691 12 10 12H14C17.309 12 20 14.691 20 18V20H18Z" fill="#4e9aeb"/>
+    </svg>
+  </div>
+</div>
+
+        <div class="summary-item">
+          <h3 style="display: inline-block;">PRODUCTS</h3>
+          <p style="display: inline-block; font-size: 1.2em; margin-left: 10px;">{{ dashboardData?.totalProducts }}</p>      
+             <div class="product-icon">
+            <svg width="64px" height="64px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L3 8v8l9 6 9-6V8l-9-6zm7 13.72L12 19.66 5 15.72V10.4l7 4.06 7-4.06v5.32zm0-6.5L12 12.44 5 9.22V7.28l7 4.05 7-4.05v1.94z" fill="#4e9aeb"/>
+            </svg>
+          </div>
+          
+
+        </div>
+      </div>
+      
+     
+      
+      <div class="col-md-2 col-3">
+        <select id="areaFilter" [(ngModel)]="selectedArea" (change)="applyFilter()">
+          <option value="atrea.name" style="background-image: url('path_to_dropdown_icon'); background-repeat: no-repeat; background-position: 95% center; padding-right: 25px;"> All Area</option>
+          <option *ngFor="let area of areas" id="areaFilter" [value]="area.name">{{ area.name }}</option>        
+        </select>
+      </div>
+      
+
+
+      
+      
+      <br>
+     
+      <div class="orders">
+        <h2>Recent Orders</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Order ID</th>
+              <th>Customer Name</th>
+              <th>Address</th>
+              <th>Products</th>
+              <th>Total</th>
+              <th>Area</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let order of filteredOrders">
+              <td>{{ order.order_id }}</td>
+              <td>{{ order.user.first_name }} {{ order.user.last_name }}</td>
+              <td>
+                {{ order.sociaty_name }}, {{ order.flat_no }}, {{ order.wing_name }}, {{ order.area }}
+              </td>
+              <td>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Product Name</th>
+                      <th>Quantity</th>
+                      <th>Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let orderProduct of order.orderProducts">
+                      <td>{{ orderProduct.product.name }}</td>
+                      <td>{{ orderProduct.quantity }}</td>
+                      <td>{{ orderProduct.price }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+              <td>{{ order.totalAmount }}</td>
+              <td>{{ order.area }}</td>
+              <td> {{ order.status }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  

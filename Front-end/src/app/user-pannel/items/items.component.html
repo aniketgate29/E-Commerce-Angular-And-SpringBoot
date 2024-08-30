@@ -1,0 +1,37 @@
+<div class="form-container">
+  <div class="form-group" style="display: flex; justify-content: center; gap: 5px;">
+    <button class="btn btn-primary" (click)="selectedCategory=''">All</button>
+    <button class="btn btn-primary" (click)="selectedCategory='Batter'">Batter</button>
+    <button class="btn btn-primary" (click)="selectedCategory='Chutney'">Chutney</button>
+    <button class="btn btn-primary" (click)="selectedCategory='Masala'">Masala</button>
+  </div>
+</div>
+
+<!-- Your form code and category filter dropdown -->
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-4" *ngFor="let product of filteredProducts">
+      <div class="product-card">
+        <img [src]="product.image" alt="Product Image" style="width: 200px; height: 200px;">
+        <div class="product-details">
+          <h3>{{ product.name }}</h3>
+          <p>Price: ₹ {{ product.price }}</p>
+          <p>Package: {{ product.verient }}</p>
+          <div style="display: flex; align-items: center;">
+            <p style="margin-right: 10px;">Quantity</p>
+            <div style="display: flex; align-items: center;">
+              <button (click)="decrementQuantity(product)" style="padding: 5px;">-</button>
+              <p style="margin: 0 10px;">{{ product.quantity }}</p>
+              <button (click)="incrementQuantity(product)" style="padding: 5px;">+</button>
+            </div>
+          </div>
+          <div style="display: flex;">
+            <button (click)="addToCart(product)" style="margin-right: 10px;">Add to Cart</button>
+            <button (click)="buyNow(product)">Buy Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

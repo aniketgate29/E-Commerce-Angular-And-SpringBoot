@@ -1,0 +1,107 @@
+/* product-card.component.css */
+
+/* Base styles for product card */
+.product-card {
+  width: 100%; /* Adjust width for mobile devices */
+  border: 2px solid #b912bd;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border: 2px solid #b912bd;
+  border-radius: 5px;
+  display: block; /* Ensures image is treated as a block element */
+  margin: 0 auto; /* Centers the image horizontally */
+}
+
+.product-details {
+  margin-top: 10px;
+}
+
+.product-details h3 {
+  font-size: 18px;
+  margin: 0 0 5px;
+}
+
+.product-details p {
+  margin: 0;
+}
+
+.product-details select {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.product-details button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 5px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-details button:hover {
+  background-color: #0056b3;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .product-card {
+    width: calc(100% - 20px); /* Adjust width to fit within viewport */
+    margin: 10px; /* Add margin for spacing */
+  }
+  
+  .product-details select {
+    margin-bottom: 5px; /* Reduce margin for select dropdown */
+  }
+}
+/* my-component.component.css */
+
+/* Style for form group */
+/* my-component.component.css */
+
+/* Style for form group */.form-group {
+  display: flex;
+  justify-content: center;
+  gap: 5px; /* Decreased gap between buttons */
+  margin: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 123, 255, 0.1);
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 6px 8px rgba(0, 123, 255, 0.2);
+}
+
+.btn-primary:active {
+  background-color: #004085;
+  transform: translateY(0); /* Return to original position on click */
+  box-shadow: 0 4px 6px rgba(0, 123, 255, 0.1);
+}
+.product-card {
+  margin-bottom: 20px; /* Adjust as needed */
+}

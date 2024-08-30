@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="login-container" style="background-image: url(https://static.wixstatic.com/media/e68122_4e70c5b05b474adf90ffe3c81d594df2~mv2.jpg/v1/fill/w_250,h_250,fp_0.50_0.50,q_30,blur_30,enc_auto/e68122_4e70c5b05b474adf90ffe3c81d594df2~mv2.jpg); background-size: cover;">
+      <div class="row justify-content-center">
+        <div class="login-form">
+          <div class="illustration"><i class="icon ion-ios-locked-outline"></i></div>
+          <h2 class="form-title"> <b>Login</b> </h2>
+          <form>
+            <div class="form-group">
+              <label for="number"><b>Mobile Number</b><span class="required">*</span></label>
+              <input class="form-control" type="text" name="number" [(ngModel)]="mobile"  placeholder="Mobile Number" />
+              <!-- Invalid feedback for number -->
+              <div class="invalid-feedback">Mobile Number is required</div>
+              <div class="invalid-feedback">Mobile Number is invalid</div>
+              <div class="invalid-feedback">Mobile Number is too short</div>
+            </div>
+            <div class="form-group">
+              <label for="pwd"><b>Password</b><span class="required">*</span></label>
+              <input class="form-control" type="password" name="password" [(ngModel)]="password" placeholder="Password" />
+              <a class="eye-b"><i class="fas fa-eye"></i></a>
+              <!-- Invalid feedback for password -->
+              <div class="invalid-feedback">Password is required</div>
+              <div class="invalid-feedback">Password is too short</div>
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary btn-block" (click)="login()" type="submit">LOGIN</button>
+            </div>
+            <!-- Forgot password option -->
+            <div class="form-group">
+              <a routerLink="/verify" class="forgot-password-link" style="color:black;"><b>Forgot Password?</b></a>
+            </div>
+          </form>
+          <p class="abc"> New User?<a routerLink="/register" class="fw-bold text-body">&nbsp;<u>Register</u></a></p>
+        </div>
+      </div>
+    </div>
+  </div>

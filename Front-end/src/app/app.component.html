@@ -1,0 +1,5 @@
+
+<app-adminpanel  *ngif = "role=== 'admin'"  >
+</app-adminpanel>
+<app-user-pannel *ngIf = "role=== 'user'"  ></app-user-pannel>
+<router-outlet></router-outlet>

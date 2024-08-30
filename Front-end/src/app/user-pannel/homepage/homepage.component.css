@@ -1,0 +1,120 @@
+
+.container{
+  margin-top: 100px;
+  margin-bottom: 100  px;
+}
+
+/* Shop description styles */
+#shop-description {
+  text-align: center; /* Center align text */
+  padding: 20px; /* Add padding for spacing */
+}
+
+#shop-description h2 {
+  font-size: 24px; /* Adjust font size */
+}
+
+#shop-description p {
+  font-size: 16px; /* Adjust font size */
+}
+
+/* Ensure carousel images are responsive */
+.owl-carousel-o img {
+  width: 100%;
+  /* Ensure aspect ratio is maintained */
+}
+
+.img-fluid {
+  height: 550px; 
+}
+
+/* Ensure the items component takes full width */
+app-items {
+  width: 100%;
+  margin: 10px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  /* Adjust container margin and padding */
+  .container {
+    margin-top: 120px; /* Example margin */
+    padding: 0 5px;
+    justify-content: center
+     /* Example padding */
+  }
+
+  /* Adjust shop description styles */
+  #shop-description {
+    padding: 10px; /* Example padding */
+  }
+
+  #shop-description h2 {
+    font-size: 20px; /* Example font size */
+  }
+
+  #shop-description p {
+    font-size: 14px; /* Example font size */
+  }
+  .img-fluid {
+    height: auto; 
+    object-fit: cover
+  }
+}
+
+
+
+
+.product-item-content { 
+	border: 1px solid var(--surface-d); 
+	border-radius: 3px; 
+	margin: 0.3rem; 
+	text-align: center; 
+	padding: 2rem 0; 
+	background-color: snow; 
+} 
+
+.product-image { 
+	width: 50%; 
+	box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 
+		0 3px 6px rgba(0, 0, 0, 0.23); 
+} 
+
+h3{ 
+	color:red; 
+	text-align: center; 
+}
+
+
+
+
+.review-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.review-slide {
+  flex: 0 0 auto;
+  margin: 0 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.review-slide.active {
+  opacity: 1;
+}
+
+.review-slide img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.review-slide p {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}

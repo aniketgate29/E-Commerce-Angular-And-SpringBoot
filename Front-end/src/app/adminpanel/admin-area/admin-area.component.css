@@ -1,0 +1,200 @@
+/* General container styles */
+.body {
+  margin-top: 10px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 20px auto; /* Consistent margin for both containers */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #dbe6f9; /* Cyan background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-top: 10px;
+  
+}
+
+/* Heading styles */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #070707; /* Complementary blue color for heading */
+}
+
+/* Form group and label styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+  color: #080808; /* Matching the heading color */
+}
+
+/* Input, textarea, and select styles */
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s; /* Smooth transition */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #007bff; /* Highlight input fields on focus */
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Button styles */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, opacity 0.3s; /* Smooth transition */
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  opacity: 0.8;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px; /* Add some space above the table */
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #b2ebf2; /* Light cyan for table header */
+}
+
+/* Image styles */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 15px;
+    margin: 15px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  th, td {
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+    margin: 10px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  select {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+
+  th, td {
+    padding: 4px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    padding: 5px;
+    margin: 5px;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  textarea,
+  select {
+    font-size: 10px;
+    padding: 5px;
+  }
+
+  button {
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+
+  th, td {
+    padding: 3px;
+  }
+
+  .form-group {
+    margin-bottom:10px;
+  }
+}

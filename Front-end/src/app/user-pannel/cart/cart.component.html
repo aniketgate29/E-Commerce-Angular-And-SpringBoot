@@ -1,0 +1,166 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <!-- Cart -->
+      <h2 class="page-heading">CART</h2>
+      <div *ngFor="let product of cartItems">
+        <div class="product-card" style="position: relative;">
+          <img [src]="product.image" alt="Product Image" style="width: 100px; height: 100px;">
+          <div class="product-details">
+            <h3>{{ product.name }}</h3>
+            <p>Price: ₹ {{ product.price }}</p>
+            <div style="display: flex; align-items: center;">
+              <p style="margin-right: 10px;">Quantity</p>
+              <div style="display: flex; align-items: center;">
+                <button (click)="decrementQuantity(product)" style="padding: 5px;">-</button>
+                <p style="margin: 0 10px;">{{ product.quantity }}</p>
+                <button (click)="incrementQuantity(product)" style="padding: 5px;">+</button>
+              </div>
+            </div>
+            <p>Total Price: ₹ {{ product.price * product.quantity }}</p>
+          </div>
+          <button (click)="deleteFromCart(product)" style="position: absolute; top: 10px; right: 10px; background-color: red; color: white; border: none; padding: 5px 10px;">X</button>
+        </div>
+      </div>
+      <button (click)="buyAll()" style="margin: 10px;">Buy All</button>
+    </div>
+    <div class="col-md-6">
+      <!-- Checkout -->
+      <h2 class="page-heading">CHECKOUT</h2>
+      <!-- Your checkout content goes here -->
+      <div class="checkout-container" *ngFor="let product of selectedProducts">
+
+        <div class="checkout-product">
+          <img [src]="product.image" alt="Product Image">
+          <div class="checkout-details">
+            <h3>{{ product.name }}</h3>
+            <p>Price: ₹ {{ product.price }}</p>
+            <p>Quantity: {{ product.quantity }}</p>
+            <p>Total Price: ₹ {{ product.price*product.quantity }}</p>
+          </div>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: space-between;">
+        <div class="total-price">
+          <p>Total No of Products: {{selectedProducts.length}}</p>
+          <p>Total Price: ₹ {{totalPrice}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container-fluid order-summary-container">
+  <h2 class="page-heading">Order Summary</h2>
+  <div class="row">
+      <!-- Left side - Order Summary -->
+      <div class="col-md-6">
+          <div class="card left-card">
+              <div class="card-body">
+                  <!-- Customer Details Card -->
+                  <div class="card">
+                      <div class="card-body">
+                          <div class="customer-details">
+                              <h3>Customer Details</h3>
+                              <p><strong>Name:</strong> {{ customer.first_name }} {{ customer.last_name }}</p>
+                              <p><strong>Phone Number:</strong> {{ customer.mobile }}</p>
+                              <p><strong>Address:</strong> {{ customer.sociaty_name +" " }}{{customer.flat_no +" "}} {{ customer.wing_name }}</p>
+                              <button class="btn btn-link" (click)="changeAddress()">Change Address</button>
+                          </div>
+
+                          <!-- Change Address Container -->
+                          <div *ngIf="showAddressChange" class="change-address-container">
+                              <h3>Change Address</h3>
+                              <div class="form-group">
+                                  <label for="newAddress">New Address:</label>
+                                  <label >Society Name</label>
+                                  <input type="text" id="newAddress" [(ngModel)]="customer.sociaty_name" placeholder="Society" name="newAddress" class="form-control">
+                                  <label >Flat No</label>
+                                  <input type="text" id="newAddress" [(ngModel)]="customer.flat_no" placeholder="Flat no" name="newAddress" class="form-control">
+                                  <label >Wing Name</label> 
+                                  <input type="text" id="newAddress" [(ngModel)]="customer.wing_name" placeholder="Wing name" name="newAddress" class="form-control">
+
+                              </div>
+                              <button class="btn btn-primary" (click)="confirmAddressChange()">Save Address</button>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Product Details Card -->
+                  <div class="card">
+                      <div class="card-body">
+                          <div class="product-details">
+                              <h3>Products</h3>
+                              <div *ngFor="let product of selectedProducts" class="product-card">
+                                  <img [src]="product.image" alt="Product Image" class="product-image">
+                                  <div class="product-info">
+                                      <h4>{{ product.name }}</h4>
+                                      <p><strong>Price:</strong> ₹ {{ product.price }}</p>
+                                      <p><strong>Quantity:</strong> {{ product.quantity }}</p>
+                                      <p><strong>Total Price:</strong> ₹ {{ product.price * product.quantity }}</p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <!-- Coupon Code Card -->
+                  <div class="card">
+                      <div class="card-body">
+                          <div class="coupon-code">
+                              <h3>Coupon Code</h3>
+                              <div class="form-group">
+                                  <label for="coupon">Enter Coupon Code:</label>
+                                  <input type="text" id="coupon" [(ngModel)]="Coupon.name" name="coupon" class="form-control">
+                              </div>
+                              <button class="btn btn-primary" (click)="applyCoupon(Coupon.name)">Apply Coupon</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- Right side - Payment Method -->
+      <div class="col-md-6">
+          <div class="card right-card">
+              <div class="card-body">
+                  <!-- Total Price Card -->
+                  <div class="card">
+                      <div class="card-body">
+                          <h3>Total</h3>
+                          <p><strong>Total Price:</strong> ₹{{totalprice}}</p>
+                      </div>
+                  </div>
+
+                  <!-- Payment Methods Card -->
+                  <div class="card">
+                      <div class="card-body">
+                          <div class="payment-methods">
+                              <h3>Payment Methods</h3>
+                              <div class="form-group">
+                                  <select [(ngModel)]="selectedPaymentMethod" name="paymentMethod" class="form-control">
+                                      <option *ngFor="let method of paymentMethods" [value]="method">{{ method }}</option>
+                                  </select>
+                              </div>
+
+                              <!-- Additional fields based on payment method -->
+                              <div *ngIf="selectedPaymentMethod === 'GPay' || selectedPaymentMethod === 'PhonePe'" class="additional-fields">
+                                  <div class="form-group">
+                                      <label for="upiNumber">UPI Number:</label>
+                                      <input type="text" id="upiNumber" [(ngModel)]="upiNumber" name="upiNumber" class="form-control">
+                                  </div>
+                              </div>
+                          </div>
+                          <button class="btn btn-primary confirm-order-button" (click)="confirmOrder()">Confirm Order</button>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+   </div>
+
+</div>
+
+

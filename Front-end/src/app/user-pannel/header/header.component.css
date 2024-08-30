@@ -1,0 +1,67 @@
+/* Header Styles */
+header {
+    background-color:orange;
+    color: #fff;
+    padding:10px; 
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ah{
+    margin: 0;
+    padding: 0 ;
+    background-color: red;height: fit-content;
+    text-align: center;
+}
+.ah p{
+    padding: 0;
+    margin: 0;
+}
+.logo {
+    display: inline-block;
+}
+.logo img {
+    height: 50px; /* Adjust the height as needed */
+    /* Add any other styling for the logo */
+}
+/* Navigation Styles */
+nav {
+    display: inline-block;
+
+    height: 40px;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+/* Hover effect */
+nav ul li a:hover {
+    color: green; /* Change color on hover */
+}
+
+/* Active page style */
+nav ul li.active a {
+    text-decoration: solid;
+    font-weight: bold;
+    border-radius: 1px;
+    color: black /* Home button color */
+}

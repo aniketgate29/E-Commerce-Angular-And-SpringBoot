@@ -1,0 +1,14 @@
+/* Ensure the header component fills the full width */
+app-header {
+    width: 100%;
+    position: fixed; /* Fix the header at the top */
+    top: 0; /* Position it at the top of the viewport */
+    z-index: 1000; /* Ensure it stays on top of other content */
+    color: #fff; /* Example text color */
+    margin-bottom: 10px;
+}
+
+app-footer {
+    width: 100%;
+    height: 100%;
+}

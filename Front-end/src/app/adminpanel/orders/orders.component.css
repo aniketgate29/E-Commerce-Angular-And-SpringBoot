@@ -1,0 +1,613 @@
+/* General Styles */
+.body {
+  overflow-x: auto;
+   margin-top: 10px;
+  
+ }
+ 
+ /* App Container */
+ .container {
+   display: flex;
+   margin-right: auto;
+   margin-bottom: auto;
+   margin-left: 240px;
+ }
+ 
+ 
+ /* Sidebar Styles */
+ .sidebar {
+   width: 100%; /* Full width on small screens */
+   background-color: #333;
+   color: #fff;
+   height: 100vh;
+   position: fixed;
+   top: 0;
+   left: 0;
+   padding-top: 10px; /* Reduced padding top */
+ }
+ .sidebar ul {
+   list-style-type: none;
+   padding: 0;
+ }
+ 
+ .sidebar ul li {
+   padding: 8px; /* Reduced padding for list items */
+   margin-bottom: 5px; /* Add margin bottom for spacing */
+ }
+ 
+ .sidebar ul li a {
+   color: #fff;
+   text-decoration: none;
+ }
+ 
+ .sidebar ul li a.active {
+   background-color: #555;
+ }
+ 
+ 
+ /* Main Content Styles */
+ .main-content {
+   margin-left: 200px;
+   padding: 20px;
+   width: calc(100% - 200px);
+   transition: margin-left 0.3s, width 0.3s;
+ }
+ 
+ /* Header Styles */
+ .header {
+   padding: 8px 0; /* Reduced padding for header */
+ }
+ 
+ .user-info {
+   padding: 5px 0; /* Reduced padding for user info */
+ }
+ 
+ /* Form Container */
+ .form-container {
+   max-width: 100%; /* Full width on small screens */
+   padding: 10px;
+   margin: 5px auto; /* Adjusted margin for form container */
+ }
+ 
+ h2 {
+   margin-bottom: 5px; /* Reduced margin bottom for headings */
+ }
+ 
+ .form-group {
+   margin-bottom: 15px; /* Reduced margin bottom for form groups */
+ }
+ 
+ /* Responsive Styles */
+ @media (max-width: 768px) {
+   .sidebar {
+     width: 150px; /* Reduce sidebar width */
+   }
+   
+   .main-content {
+     margin-left: 150px;
+     width: calc(100% - 150px);
+   }
+   
+   .header {
+     padding: 8px 0;
+   }
+ }
+ 
+ @media (max-width: 480px) {
+   .sidebar {
+     width: 100px; /* Further reduce sidebar width */
+   }
+   
+   .main-content {
+     margin-left: 100px;
+     width: calc(100% - 100px);
+   }
+   
+   .sidebar ul li {
+     padding: 8px;
+   }
+   
+   .header {
+     flex-direction: column;
+     align-items: flex-start;
+   }
+   
+   .header, .user-info {
+     padding: 5px 0;
+   }
+ }
+ 
+ @media (max-width: 320px) {
+   .sidebar {
+     width: 80px; /* Minimize sidebar width for very small screens */
+   }
+   
+   .main-content {
+     margin-left: 80px;
+     width: calc(100% - 80px);
+   }
+   
+   .sidebar ul li {
+     padding: 6px;
+   }
+   
+   .header {
+     padding: 4px 0;
+   }
+   
+   .user-info {
+     font-size: 0.8rem;
+   }
+ }
+ 
+ /* Form Container */
+ 
+ .body
+ {
+   margin-top:10px;
+ }
+ .form-container {
+   max-width: 90%; /* Reduce max-width for a smaller container */
+   padding: 10px; /* Adjust padding for a more compact look */
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   background-color: #dbe6f9; /* Dark gray background color */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+   margin: 10px auto; /* Center the form container */
+ }
+ 
+ h2 {
+   margin-bottom: 10px;
+   color: #050505; /* Matching the other headings */
+ }
+ 
+ .form-group {
+   margin-bottom: 20px;
+   width: 100%;
+ }
+ 
+ label {
+   font-weight: bold;
+   color: #070707; /* Matching the heading color */
+ }
+ 
+ input[type="text"],
+ input[type="number"],
+ textarea,
+ select {
+   width: 100%;
+   padding: 8px; /* Reduced padding for a more compact input */
+   font-size: 14px; /* Reduced font size for a more compact input */
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   box-sizing: border-box;
+   transition: border-color 0.3s; /* Smooth transition */
+ }
+ 
+ input[type="text"]:focus,
+ input[type="number"]:focus,
+ textarea:focus,
+ select:focus {
+   border-color: #007bff; /* Highlight input fields on focus */
+ }
+ 
+ textarea {
+   resize: vertical;
+   height: auto;
+ }
+ 
+ button {
+   padding: 8px 16px; /* Reduced padding for a more compact button */
+   font-size: 14px; /* Reduced font size for a more compact button */
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s, opacity 0.3s; /* Smooth transition */
+   gap: 10px; /* Adjust gap between button elements */
+ }
+ 
+ .btn-primary {
+   background-color: #007bff;
+   color: #fff;
+ }
+ 
+ .btn-secondary {
+   background-color: #6c757d
+ }
+ 
+ .orders {
+   background: white;
+   padding: 20px;
+   border-radius: 8px;
+   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+   overflow-x: auto;
+ }
+ 
+ .orders h2 {
+   margin-top: 0;
+   color: #0b0b0b;
+ }
+ 
+ .orders table {
+   width: 100%;
+   border-collapse: collapse;
+   margin-top: 15px;
+   overflow-x: auto;
+ 
+ }
+ 
+ .orders th, .orders td {
+   padding: 12px 15px;
+   border: 1px solid #eee;
+   text-align: left;
+   color: #060101;
+ }
+ 
+ .orders th {
+   background: #f9f9f9;
+   font-weight: bold;
+ }
+ 
+ .orders tr:nth-child(even) {
+   background: #f9f9f9;
+ }
+ 
+ .orders tr:hover {
+   background: #f1f1f1;
+ }
+ 
+ .pending-status {
+   color: orange; /* Example color for pending status */
+ }
+ 
+ .canceled-status {
+   color: red; /* Example color for canceled status */
+ }
+ 
+ .completed-status {
+   color: green; /* Example color for completed status */
+ }
+ element.style {
+ }
+ .text-gray-300 {
+     color: #dddfeb !important;
+ }
+ .fa, .fas {
+     font-weight: 900;
+ }
+ .fa, .far, .fas {
+     font-family: "Font Awesome 5 Free";
+ }
+ .fa-2x {
+     font-size: 2em;
+ }
+ .fa, .fab, .fad, .fal, .far, .fas {
+     -moz-osx-font-smoothing: grayscale;
+     -webkit-font-smoothing: antialiased;
+     display: inline-block;
+     font-style: normal;
+     font-variant: normal;
+     text-rendering: auto;
+     line-height: 1;
+ }
+ *, :after, :before {
+   box-sizing: border-box;
+ }
+ user agent stylesheet
+ i {
+   font-style: italic;
+ }
+ .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+   position: relative;
+   width: 100%;
+   padding-right: .75rem;
+   padding-left: .75rem;
+ }
+ col-md-2 col-3{
+   width: auto;
+   height: auto;
+ }
+ 
+ .form-control mb-2{
+ 
+   width: auto;
+   height: auto;
+ }
+ 
+ /* CSS for the select element */
+ .col-md-2.col-3 .form-control {
+   width: auto; /* Make the select element take up 100% of its container width */
+ }
+ 
+ /* Optional: Adjust margin-bottom for spacing */
+ .col-md-2.col-3 .mb-2 {
+   margin-bottom: 10px; /* Adjust as needed */
+ }
+ 
+ /* CSS for the dropdown arrow */
+ 
+ .icon {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background:#dbe6f9;
+   padding: 15px 20px;
+   border-radius: 8px;
+   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+   margin-bottom: 20px;
+   position: relative; /* Ensure positioning context for absolute positioning */
+ }
+ 
+ /* Navigation Drawer Icon */
+ .nav-toggle-icon {
+   position: absolute;
+   top: 50%;
+   left: 20px; /* Adjust as needed */
+   transform: translateY(-50%);
+   z-index: 9999;
+   cursor: pointer;
+   width: 40px;
+   height: 40px;
+   background-color: transparent;
+   border: none;
+ }
+ 
+ /* Horizontal Lines for Icon */
+ .nav-toggle-icon::before,
+ .nav-toggle-icon::after {
+   content: '';
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   width: 30px;
+   height: 3px;
+   background-color: #fff;
+   transition: transform 0.3s ease;
+ }
+ 
+ /* Transform Lines for Icon */
+ .nav-toggle-icon::before {
+   transform: translateY(-8px) translateX(-50%);
+ }
+ 
+ .nav-toggle-icon::after {
+   transform: translateY(8px) translateX(-50%);
+ }
+ 
+ /* Rotate Lines for Icon when Active */
+ #nav-toggle:checked + .nav-toggle-icon::before {
+   transform: rotate(45deg) translate(-50%, -50%);
+ }
+ 
+ #nav-toggle:checked + .nav-toggle-icon::after {
+   transform: rotate(-45deg) translate(-50%, -50%);
+ }
+ 
+ #nav-toggle:checked + .nav-toggle-icon::before,
+ #nav-toggle:checked + .nav-toggle-icon::after {
+   transition-delay: 0.1s;
+ }
+ 
+ /* Hide Checkbox */
+ #nav-toggle {
+   display: none;
+ }
+ 
+ 
+ 
+ .summary-item {
+   display: flex;
+   align-items: center;
+   gap: 10px; /* Adjust the gap between elements */
+ }
+ 
+ .summary-item svg {
+   width: 32px; /* Adjust the size as needed */
+   height: 32px; /* Adjust the size as needed */
+   fill: #6c757d; /* Adjust the color as needed, matching text-gray-300 */
+ }
+ 
+ 
+ .customer-icon {
+   display: inline-block;
+   width: 50px;
+   height: 50px;
+   transition: transform 0.3s, box-shadow 0.3s;
+   cursor: pointer;
+   margin-left: 80px;
+ 
+ }
+ 
+ .customer-icon svg {
+   width: 100%;
+   height: 100%;
+   fill: #4e9aeb;
+   transition: fill 0.3s;
+ }
+ 
+ .customer-icon:hover {
+   transform: scale(1.1);
+   box-shadow: 0 4px 15px rgba(0, 2, 9, 0.2);
+   margin-left: 80px
+ }
+ 
+ .customer-icon:hover svg {
+   fill: #6cadf1;
+ 
+ }
+ 
+ .product-icon {
+   display: inline-block;
+   width: 64px;
+   height: 64px;
+   transition: transform 0.3s, box-shadow 0.3s;
+   cursor: pointer;
+   margin-left: 80px;
+ 
+ }
+ 
+ .product-icon svg {
+   width: 100%;
+   height: 100%;
+   fill: #28a745; /* Green color */
+   transition: fill 0.3s;
+ 
+ }
+ 
+ .product-icon:hover {
+   transform: scale(1.1);
+   box-shadow: 0 4px 15px rgba(96, 94, 232, 0.2);
+   margin-left: 80px;
+ 
+ }
+ 
+ .product-icon:hover svg {
+   fill: #218838; /* Darker green on hover */
+ }
+ 
+ 
+ 
+ 
+ 
+ /* Sidebar Styles */
+ .sidebar {
+   width: 150px; /* Reduced width for sidebar */
+   padding-top: 10px; /* Reduced padding top */
+ }
+ 
+ .sidebar ul li {
+   padding: 8px; /* Reduced padding for list items */
+ }
+ 
+ /* Main Content Styles */
+ .main-content {
+   margin-left: 150px; /* Adjusted margin for main content */
+   padding: 15px; /* Increased padding for main content */
+ }
+ 
+ /* Header Styles */
+ .header {
+   padding: 8px 0; /* Reduced padding for header */
+ }
+ 
+ .user-info {
+   padding: 5px 0; /* Reduced padding for user info */
+ }
+ 
+ /* Form Container */
+ .form-container {
+   max-width: 90%;
+   padding: 10px;
+   margin: 5px auto; /* Adjusted margin for form container */
+ }
+ 
+ h2 {
+   margin-bottom: 5px; /* Reduced margin bottom for headings */
+ }
+ 
+ .form-group {
+   margin-bottom: 15px; /* Reduced margin bottom for form groups */
+ }
+ 
+ input[type="text"],
+ input[type="number"],
+ textarea,
+ select {
+   font-size: 12px; /* Reduced font size for inputs */
+ }
+ 
+ button {
+   padding: 8px 12px; /* Reduced padding for buttons */
+   font-size: 12px; /* Reduced font size for buttons */
+ }
+ 
+ 
+ 
+ /* Optional: Hide non-essential elements on small screens */
+ @media (max-width: 480px)
+  {
+   .icon,
+   .customer-icon,
+   .product-icon {
+     display: none; /* Hide icons on small screens */
+   }
+ }
+ 
+ /* Mobile Responsive Styles */
+ @media (max-width: 480px) {
+   /* General Styles */
+   .body {
+     margin-top: 5px; /* Adjusted margin top */
+   }
+   
+   /* App Container */
+   .container {
+     margin-left: 0; /* Reset margin left */
+     margin-right: 0; /* Reset margin right */
+   }
+ 
+   /* Sidebar Styles */
+   .sidebar {
+     width: 100%; /* Full width on small screens */
+     padding-top: 5px; /* Reduced padding top */
+   }
+ 
+   .sidebar ul li {
+     padding: 5px; /* Reduced padding for list items */
+   }
+ 
+   /* Main Content Styles */
+   .main-content {
+     margin-left: 0; /* Reset margin left */
+     padding: 10px; /* Increased padding for main content */
+     width: 100%; /* Full width on small screens */
+   }
+ 
+   /* Header Styles */
+   .header {
+     padding: 5px 0; /* Reduced padding for header */
+   }
+ 
+   .user-info {
+     padding: 3px 0; /* Reduced padding for user info */
+   }
+ 
+   /* Form Container */
+   .form-container {
+     max-width: 90%; /* Reduced max-width for smaller container */
+     padding: 5px; /* Adjusted padding for form container */
+     margin: 5px auto; /* Center the form container */
+   }
+ 
+   h2 {
+     margin-bottom: 3px; /* Reduced margin bottom for headings */
+   }
+ 
+   .form-group {
+     margin-bottom: 10px; /* Reduced margin bottom for form groups */
+   }
+ 
+   /* Input Types */
+   input[type="text"],
+   input[type="number"],
+   textarea,
+   select {
+     font-size: 12px; /* Reduced font size for inputs */
+     padding: 5px; /* Adjusted padding for inputs */
+   }
+ 
+   button {
+     padding: 5px 10px; /* Reduced padding for buttons */
+     font-size: 12px; /* Reduced font size for buttons */
+   }
+ 
+   /* Optional: Hide non-essential elements on small screens */
+   .icon,
+   .customer-icon,
+   .product-icon {
+     display: none; /* Hide icons on small screens */
+   }
+ }
+ .horizontal-scroll {
+   overflow-x: auto;
+   white-space: nowrap; /* Prevent line breaks */
+ }

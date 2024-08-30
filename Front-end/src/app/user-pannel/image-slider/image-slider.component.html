@@ -1,0 +1,16 @@
+<h2> Words of Appreciation</h2>
+
+<div class="slider">
+  <div class="slide-track">
+    <div class="review-container" [style.transform]="'translateX(' + (-currentReviewIndex * 250) + 'px)'">
+      <img *ngFor="let review of reviews; let i = index"
+           class="review-image"
+           [src]="review.imageUrl"
+           [alt]="review.altText">
+    </div>
+  </div>
+    <button class="prev-btn" (click)="prevReview()"><</button>
+    <button class="next-btn" (click)="nextReview()">></button>
+  
+  </div>
+  

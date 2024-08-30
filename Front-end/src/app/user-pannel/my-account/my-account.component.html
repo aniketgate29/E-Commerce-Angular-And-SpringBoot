@@ -1,0 +1,63 @@
+  <div class="container">
+    <div class="row justify-content-center">
+      <h2 class="text-uppercase text-center mb-4"><b>My Account</b></h2>
+      <form>
+        <!-- Customer Details Editing -->
+        <div class="row">
+          <div class="col-md-6 mb-2">
+            <div class="form-outline">
+              <label for="firstname" class="form-label">First name <span class="required">*</span></label>
+              <input type="text" id="firstname" class="form-control" name="firstname" placeholder="First Name" required [(ngModel)]="editedCustomerData.first_name" />
+            </div>
+          </div>
+          <div class="col-md-6 mb-2">
+            <div class="form-outline">
+              <label for="lastname" class="form-label">Last name <span class="required">*</span></label>
+              <input type="text" name="lastname" placeholder="Last Name" id="lastname" class="form-control" required [(ngModel)]="editedCustomerData.last_name" />
+            </div>
+          </div>
+        </div>
+  
+        <!-- Address Details Editing -->
+        <div class="form-outline mb-2 form-group">
+          <label for="address" class="form-label">Address <span class="required">*</span></label>
+          <div class="input-group">
+            <input class="form-control" type="text" name="society" placeholder="Society name" required [(ngModel)]="editedCustomerData.sociaty_name" />
+          </div>
+          <div class="input-group mt-2">
+            <input class="form-control" type="text" name="flat" placeholder="Flat no" required [(ngModel)]="editedCustomerData.flat_no" />
+          </div>
+          <div class="input-group mt-2">
+            <input class="form-control" type="text" name="wing" placeholder="Wing name" required [(ngModel)]="editedCustomerData.wing_name" />
+          </div>
+        </div>
+  
+        <!-- Area Selection Editing -->
+        <div class="form-outline mb-2 form-group">
+          <label for="area" class="form-label">Area <span class="required">*</span></label>
+          <select class="form-select" name="area" required [(ngModel)]="editedCustomerData.area">
+            <option value="" selected disabled>Select an area</option>
+            <option *ngFor="let area of areas" [value]="area.name">{{ area.name }}</option>
+          </select>
+        </div>
+  
+        <!-- Email and Mobile Number Editing -->
+        <div class="form-outline mb-2 form-group">
+          <label for="email" class="form-label">Your Email <span class="required">*</span></label>
+          <input class="form-control" type="email" name="email" placeholder="Email address" required [(ngModel)]="editedCustomerData.email" />
+        </div>
+        <div class="form-outline mb-2 form-group">
+          <label for="mobile" class="form-label">Mobile No <span class="required">*</span></label>
+          <input class="form-control" type="tel" name="mobile" placeholder="Mobile No" required [(ngModel)]="editedCustomerData.mobile" />
+        </div>
+  
+        <!-- Form Submission Button -->
+        <div class="d-flex justify-content-center mb-4">
+          <button (click)="updateCustomerDetails()" type="button" class="btn btn-primary btn-block">
+            Update Details
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  

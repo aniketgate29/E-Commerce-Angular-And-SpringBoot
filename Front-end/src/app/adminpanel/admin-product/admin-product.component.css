@@ -1,0 +1,196 @@
+/* admin-product.component.css */
+
+/* Form Container */
+
+.body
+{
+  margin-top:10px;
+}
+.form-container {
+  max-width: 1200px; /* Reduce max-width for a smaller container */
+  padding: 15px; /* Adjust padding for a more compact look */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #dbe6f9; /* Dark gray background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-left: 240px;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: auto;
+  overflow-x: auto; /* Allow horizontal scroll on small screens */
+
+  
+}
+
+h2 {
+  
+  margin-bottom: 10px;
+  color: #050505; /* Matching the other headings */
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+label {
+  font-weight: bold;
+  color: #070707; /* Matching the heading color */
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s; /* Smooth transition */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #007bff; /* Highlight input fields on focus */
+}
+
+textarea {
+  resize: vertical;
+  height: auto;
+  width: 410px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, opacity 0.3s; /* Smooth transition */
+  gap: 20px;
+  
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  opacity: 0.8;
+}
+
+/* Product List Container */
+.product-list-container {
+
+  
+  max-width: 1200px; /* Reduce max-width for a smaller container */
+  padding: 15px; /* Adjust padding for a more compact look */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9fafc; /* Dark gray background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-left: 240px;
+  margin-right: 20px;
+  margin-top: 10px;
+  margin-bottom: auto;
+  overflow-x: auto; /* Allow horizontal scroll on small screens */
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px; /* Add some space above the table */
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #b2ebf2; /* Light cyan for table header */
+}
+
+/* Image styles */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Actions buttons styles */
+.actions-btns {
+  display: flex; /* Use flexbox for horizontal alignment */
+  justify-content: flex-start; /* Align items to the start of the container */
+  align-items: center;
+  gap: 10px; /* Add some space between buttons */
+}
+
+.actions-btns button {
+  margin-right: 0; /* Remove the right margin */
+}
+.form-horizontal {
+  display: flex;
+  gap: 20px; /* Adjust gap as needed */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 668px) {
+  /* Form Container */
+  .form-container {
+    max-width: 90%; /* Reduce max-width for smaller container */
+    margin-left: auto; /* Center the form container */
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  textarea {
+    width: 100%; /* Make textarea full width */
+  }
+
+  /* Product List Container */
+  .product-list-container {
+    max-width: 90%; /* Reduce max-width for smaller container */
+    margin-left: auto; /* Center the product list container */
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .table {
+    margin-top: 10px; /* Add some space above the table */
+  }
+
+  /* Actions buttons styles */
+  .actions-btns {
+    flex-wrap: wrap; /* Allow buttons to wrap on smaller screens */
+    gap: 10px; /* Adjust gap as needed */
+  }
+
+  .actions-btns button {
+    margin-right: 10px; /* Add some space between buttons */
+  }
+
+  /* Form Group */
+  .form-group {
+    margin-bottom: 15px; /* Add some space between form groups */
+}
+}

@@ -1,0 +1,16 @@
+body {
+
+    overflow-x: hidden;
+    overflow-y: auto; /* Enable vertical scrolling */
+    -webkit-overflow-scrolling: touch;
+  }
+  ::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+  @media screen and (max-width: 768px) {
+  
+    body {
+      justify-content: center;
+    }
+    }
+    /* src/styles.css */

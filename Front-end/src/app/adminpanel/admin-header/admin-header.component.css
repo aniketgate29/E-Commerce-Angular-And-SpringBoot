@@ -1,0 +1,124 @@
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background: linear-gradient(135deg, #f3e5cb, #e7a934);
+    color: #fff;
+    position: fixed;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    transition: width 0.3s ease; /* Add transition for smooth width change */
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    padding: 10px;
+    transition: background-color 0.3s ease; /* Add transition for smooth background change */
+  }
+  
+  .sidebar ul li a {
+    color: #080808;
+    text-decoration: none;
+    font-size: large;
+    font-weight: bold; /* Make the text bold */
+  }
+  
+  .sidebar ul li:hover {
+    background-color: #0d67b1; /* Change background color on hover */
+  }
+  
+  /* Hover Effect for Links */
+  .sidebar ul li a:hover {
+    color: #ef09a2; /* Change text color on hover */
+  }
+  
+  /* Main Content */
+  .main-content {
+    margin-left: 220px; /* Same as the width of the sidebar */
+    padding: 20px;
+    width: calc(100% - 220px); /* Adjust to the width of the sidebar */
+    transition: margin-left 0.3s ease; /* Add transition for smooth margin-left change */
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-weight: bold; /* Make the text bold */
+  }
+  
+  /* User Info */
+  .user-info {
+    display: flex;
+    align-items: center;
+    font-weight: bold; /* Make the text bold */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 60px;
+    }
+  
+    .sidebar ul li a {
+      font-size: medium;
+      display: block; /* Ensures text is visible even in smaller width */
+      white-space: nowrap; /* Prevents text from wrapping */
+    }
+  
+    .sidebar ul li a:hover {
+      color: #fff;
+    }
+  
+    .sidebar ul li a:before {
+      content: attr(data-icon);
+      display: block;
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+    }
+  
+    .main-content {
+      margin-left: 60px; /* Adjust margin-left to the collapsed sidebar width */
+      width: calc(100% - 60px); /* Adjust to the width of the collapsed sidebar */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+  
+    .sidebar ul {
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+    }
+  
+    .sidebar ul li {
+      display: inline-block;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .main-content {
+      margin-left: 0; /* No sidebar width to consider */
+      width: 100%; /* Full width */
+      padding: 10px; /* Reduce padding for smaller screens */
+    }
+  
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .user-info {
+      margin-top:10px;
+}
+}

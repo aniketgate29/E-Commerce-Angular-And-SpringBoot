@@ -1,0 +1,113 @@
+.container {
+    width: 430px;
+    margin: 30px auto;
+    align:center; /* Center the container horizontally */
+    padding: 30px;
+    border: 3px solid #007bff; /* Added border */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-top: 120px;
+    margin-bottom: 50px;
+    
+}
+
+.tab-content {
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+}
+
+.form-outline {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    color: white;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #66afe9;
+}
+
+.required {
+    color: red;
+}
+
+.password-div {
+    position: relative;
+}
+
+.eye-b {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #777;
+}
+
+.eye-b:hover {
+    color: #333;
+}
+
+.d-flex {
+    justify-content: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    align:center; 
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.text-muted {
+    color: #777;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.input1 {
+    margin-right: 10px;
+}
+.container::before {
+    content: "";
+    background: rgba(255, 255, 255, 0.5); /* Adjust opacity here */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+  .tacbox{
+    color: #fff;
+  }
+  .abc{
+    color: white;
+  }

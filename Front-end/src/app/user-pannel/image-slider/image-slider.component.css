@@ -1,0 +1,79 @@
+
+h2{
+        font-size: 30px;
+        font-style: bold;
+        text-align: center;
+    
+}
+.slider {
+  margin: auto;
+    position: relative;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    overflow-x: hidden;
+  }
+  .slide-track{
+    display: flex;
+    width: calc(250px * 18);
+    animation: scroll 40s linear infinite;
+    }
+    @keyframes scroll {
+      0%{
+        transform: translateX(0);
+      }
+      100%{
+        transform: translateX(calc(-250px*9));
+      }
+    }
+    .slide{
+      height: 200px; 
+      width: 250px;
+      display: flex;
+      align-items: center;
+      padding: 15px;
+    }
+  .review-container {
+    display: flex;
+    transition: transform 0.3s ease;
+    justify-content: flex-start; /* Start images from the left side */
+    align-items: center; /* Center images vertically */
+  }
+  
+  .review-image {
+    width: 250px;
+    height: 300px;
+    margin: 20px;
+    display: block;
+  }
+  
+  .prev-btn,
+  .next-btn {
+    position: absolute;
+    top: 50%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 8px 16px;
+    cursor: pointer;
+    z-index: 1; /* Ensure buttons are above images */
+  }
+  
+  .prev-btn {
+    left: 0;
+  }
+  
+  .next-btn {
+    right: 0;
+  }
+  
+  
+  
+
+  
+
+
+
+
+
+
+  

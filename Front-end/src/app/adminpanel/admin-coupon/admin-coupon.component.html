@@ -1,0 +1,43 @@
+<body>
+  <div class="container">
+      <h2>Add New Coupon</h2>
+      <div class="form-group">
+        <label for="couponName">Coupon Name:</label>
+        <input type="text" class="form-control" id="couponName" name="couponName" [(ngModel)]="couponName" required>
+      </div>
+      <div class="form-group">
+          <label for="discount">Coupon Discount (%):</label>
+          <input type="number" class="form-control" id="discount" name="discount" [(ngModel)]="discount" required>
+        </div>
+      <button class="btn btn-primary" (click)="addCoupon();">Add Coupon</button>
+    </div>
+  
+    <!-- Coupon List Display in Table Format -->
+    <div class="container mt-4">
+      <h3>Added Coupons:</h3>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Coupon Name</th>
+            <th>Discount (%)</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let coupon of coupons; let i = index">
+            <td>{{ i + 1 }}</td>
+            <td>{{ coupon.name }}</td>
+            <td>{{ coupon.discount }}</td>
+            <td>
+              <button type="button" class="btn btn-danger btn-sm" (click)="deleteCoupon(coupon)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <div *ngIf="!coupons.length">
+      <h4 class="text-center">No coupons found.</h4>
+    </div></body>
+  
